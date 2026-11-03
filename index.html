@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#faf9f6" />
+<meta name="description" content="EZURA — novel writer, frontend developer, worldbuilder, and illustrator. Portfolio in Indonesian and English." />
+<title>EZURA — Creative Portfolio</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&family=Syne:wght@700;800&display=swap');
+:root{--paper:#faf9f6;--ink:#111;--muted:#777;--line:#222;--serif:Georgia,serif;--mono:'DM Mono',monospace;--sans:'Space Grotesk',Arial,sans-serif;--display:'Syne','Arial Black',sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);overflow-x:hidden}a{color:inherit;text-decoration:none}button{font:inherit}.grain{position:fixed;inset:0;pointer-events:none;opacity:.055;z-index:10;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.25'/%3E%3C/svg%3E")}
+.topbar{position:fixed;top:18px;left:50%;transform:translateX(-50%);width:min(92%,980px);z-index:20;border:1.5px solid var(--ink);border-radius:999px;background:rgba(250,249,246,.88);backdrop-filter:blur(12px);display:flex;align-items:center;justify-content:space-between;padding:10px 16px;box-shadow:4px 4px 0 var(--ink)}.brand{font-weight:800;letter-spacing:-.06em}.nav{display:flex;gap:20px;font:11px var(--mono);text-transform:uppercase}.nav a{position:relative}.nav a:after{content:'';position:absolute;left:0;bottom:-4px;width:0;height:1px;background:var(--ink);transition:.25s}.nav a:hover:after{width:100%}.menu{display:none;border:0;background:none;font-size:22px}
+section{position:relative;padding:110px 7vw;max-width:1400px;margin:auto}.hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding-top:130px;text-align:center;overflow:hidden}.eyebrow{font:11px var(--mono);letter-spacing:.16em;text-transform:uppercase}.hero-mark{width:min(760px,95vw);position:relative;margin:24px auto 16px}.browser{border:1.5px solid var(--ink);border-radius:22px;padding:12px 14px 18px;position:relative;background:var(--paper);box-shadow:8px 8px 0 var(--ink)}.browser:before{content:'—  ×';display:block;text-align:left;font:12px var(--mono);border-bottom:1px solid #999;padding:0 0 9px;color:#333}.browser:after{content:'•••';position:absolute;right:15px;top:11px;font:13px var(--mono);letter-spacing:3px}.hero-title{font:800 clamp(4rem,13vw,10.5rem)/.82 var(--display);letter-spacing:-.095em;margin:28px 0 18px;-webkit-text-stroke:1.6px var(--ink);color:var(--paper);text-shadow:3px 3px 0 var(--ink),-1px -1px 0 var(--ink)}.hero-title span{color:var(--ink);-webkit-text-stroke:0;text-shadow:none}.hero-sub{font:12px var(--mono);letter-spacing:.08em;margin:0 auto 22px}.welcome{display:inline-flex;align-items:center;gap:10px;border:1.5px solid var(--ink);border-radius:14px;padding:13px 22px;background:white;box-shadow:3px 3px 0 var(--ink);font-weight:700;transform:rotate(-2deg);transition:.25s}.welcome:hover{transform:rotate(1deg) translateY(-3px);box-shadow:6px 6px 0 var(--ink)}.spark{position:absolute;font-size:36px}.spark.one{left:8%;top:20%}.spark.two{right:7%;bottom:18%;font-size:26px}.orbit{position:absolute;border:1px dashed #555;border-radius:50%;width:250px;height:130px;transform:rotate(-28deg);pointer-events:none}.orbit.a{top:13%;left:-100px}.orbit.b{right:-120px;bottom:8%;transform:rotate(28deg)}.doodle{position:absolute;width:90px;height:90px;opacity:.95}.doodle svg{width:100%;height:100%}
+.section-kicker{font:11px var(--mono);letter-spacing:.15em;text-transform:uppercase;color:#555;margin-bottom:16px}.section-title{font:800 clamp(3rem,8vw,7rem)/.9 var(--display);letter-spacing:-.08em;margin:0 0 30px;text-shadow:2px 2px 0 var(--paper),4px 4px 0 var(--ink);-webkit-text-stroke:.7px var(--ink);color:var(--paper)}.about-wrap{display:grid;grid-template-columns:1fr 1.2fr;gap:7vw;align-items:center}.avatar-card{border:1.5px solid var(--ink);border-radius:20px;padding:12px;background:#fff;box-shadow:9px 9px 0 var(--ink);transform:rotate(-2deg);max-width:340px;margin:auto}.avatar-top{font:11px var(--mono);border-bottom:1px solid #aaa;padding:2px 0 10px}.avatar-art{height:270px;display:grid;place-items:center;background:radial-gradient(#111 1px,transparent 1px);background-size:13px 13px;margin-top:12px}.avatar-art svg{width:190px;max-width:90%;filter:drop-shadow(5px 5px 0 white)}.ezura-avatar-mark{font:800 clamp(2.5rem,8vw,4.5rem)/1 var(--display);letter-spacing:-.1em;border:3px solid #111;padding:20px 13px;background:#faf9f6;box-shadow:7px 7px 0 #111;transform:rotate(-7deg);position:relative}.ezura-avatar-mark span{font-size:20px;position:absolute;right:-13px;top:-16px;letter-spacing:0}.about-copy{font-size:clamp(16px,2vw,20px);line-height:1.8;max-width:620px}.about-copy strong{background:#111;color:white;padding:1px 6px;transform:rotate(-1deg);display:inline-block}.tag-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:25px}.tag{font:10px var(--mono);border:1px solid var(--ink);border-radius:99px;padding:8px 12px;background:white}
+.skills{background:#171717;color:#faf9f6;border-radius:28px;padding:65px 6vw;margin:35px 4vw;max-width:none}.skills .section-title{color:#171717;-webkit-text-stroke:1px #faf9f6;text-shadow:2px 2px 0 #171717,4px 4px 0 #faf9f6}.skills .section-kicker{color:#bbb}.skill-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.skill-card{border:1px solid #777;border-radius:15px;padding:22px 18px;min-height:180px;transition:.25s;background:#202020}.skill-card:hover{background:#faf9f6;color:#111;transform:translateY(-7px) rotate(-1deg);box-shadow:5px 5px 0 #888}.skill-num{font:11px var(--mono);opacity:.65}.skill-icon{font-size:30px;margin:20px 0 10px}.skill-card h3{font-size:20px;margin:0 0 8px}.skill-card p{font:11px/1.7 var(--mono);opacity:.7;margin:0}
+.work-intro{display:flex;justify-content:space-between;align-items:end;gap:20px}.work-intro p{max-width:300px;font:12px/1.8 var(--mono)}.work-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:30px}.work-card{border:1.5px solid var(--ink);border-radius:18px;overflow:hidden;background:#fff;box-shadow:6px 6px 0 var(--ink);transition:.25s}.work-card:hover{transform:translate(-3px,-4px);box-shadow:10px 10px 0 var(--ink)}.work-visual{height:250px;display:grid;place-items:center;position:relative;overflow:hidden;background:#eee}.work-visual.dark{background:#171717;color:#fff}.work-visual.pattern{background-color:#f3f1eb;background-image:radial-gradient(#111 1px,transparent 1px);background-size:14px 14px}.visual-word{font:800 clamp(2rem,6vw,5rem)/.9 var(--display);letter-spacing:-.08em;text-align:center;padding:20px}.visual-word.outline{color:transparent;-webkit-text-stroke:1.5px #111}.book{width:125px;height:175px;background:#191919;color:white;box-shadow:9px 8px 0 #aaa;transform:rotate(-7deg);display:flex;flex-direction:column;justify-content:space-between;padding:15px;text-align:left}.book b{font:800 22px var(--display);line-height:.95}.book small{font:8px var(--mono)}.game-screen{width:72%;height:68%;border:2px solid currentColor;border-radius:9px;display:grid;place-items:center;box-shadow:8px 8px 0 currentColor}.cube{width:90px;height:90px;border:2px solid #111;transform:rotate(30deg) skew(-8deg);box-shadow:15px 15px 0 #bbb}.work-meta{padding:18px 20px}.work-meta small{font:10px var(--mono);letter-spacing:.12em}.work-meta h3{font:700 25px var(--display);letter-spacing:-.04em;margin:7px 0}.work-meta p{font-size:13px;line-height:1.6;color:#555;margin:0}.work-link{display:inline-block;margin-top:13px;font:10px var(--mono);border-bottom:1px solid;padding-bottom:3px}
+.process{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}.process-box{background:#191919;color:white;border-radius:20px;padding:40px;box-shadow:9px 9px 0 #bbb;transform:rotate(1deg)}.process-box ol{font:12px/2.4 var(--mono);padding-left:20px}.process-copy p{line-height:1.8;color:#555}.contact{padding-bottom:140px;text-align:center}.contact .section-title{font-size:clamp(3.5rem,11vw,9rem)}.contact-note{font:12px/1.8 var(--mono);max-width:450px;margin:0 auto 25px}.contact-btn{display:inline-block;background:#111;color:#fff;padding:16px 25px;border-radius:999px;font:11px var(--mono);border:1px solid #111;transition:.2s}.contact-btn:hover{background:white;color:#111;transform:rotate(-2deg)}footer{border-top:1px solid #aaa;padding:20px 7vw;display:flex;justify-content:space-between;font:10px var(--mono);gap:15px;flex-wrap:wrap}.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}.reveal.show{opacity:1;transform:translateY(0)}.cursor-star{position:absolute;right:13%;top:16%;font-size:50px;animation:spin 18s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}
+@media(max-width:800px){.nav{display:none;position:absolute;top:55px;left:0;right:0;background:var(--paper);border:1px solid #111;border-radius:15px;padding:18px;flex-direction:column;gap:15px}.nav.open{display:flex}.menu{display:block}.about-wrap,.process{grid-template-columns:1fr}.skill-grid{grid-template-columns:repeat(2,1fr)}.work-grid{grid-template-columns:1fr}.work-intro{display:block}.skills{margin:20px 3vw;padding:45px 5vw}.avatar-card{margin:10px auto 25px}.hero{min-height:90vh}.work-visual{height:220px}}
+@media(max-width:430px){section{padding:85px 6vw}.skill-grid{grid-template-columns:1fr 1fr}.skill-card{padding:16px 13px;min-height:165px}.skill-card h3{font-size:17px}.hero-title{font-size:19vw}.section-title{font-size:15vw}.process-box{padding:25px}.topbar{top:10px}.doodle{width:60px;height:60px}}
+
+.novel-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px;margin-top:28px}
+.novel-card{border:1.5px solid var(--ink);border-radius:18px;overflow:hidden;background:#fff;box-shadow:6px 6px 0 var(--ink);transition:.25s}
+.novel-card:hover{transform:translate(-3px,-4px);box-shadow:10px 10px 0 var(--ink)}
+.novel-cover{background:#171717;padding:18px;display:grid;place-items:center;min-height:360px}
+.novel-cover img{display:block;width:min(100%,270px);height:420px;object-fit:contain;filter:drop-shadow(8px 8px 0 rgba(0,0,0,.35));transition:transform .35s}
+.novel-card:hover .novel-cover img{transform:translateY(-5px) rotate(-1deg)}
+.novel-info{padding:20px}
+.novel-info small{font:10px var(--mono);letter-spacing:.12em}
+.novel-info h3{font:700 clamp(21px,3vw,30px)/1.1 var(--display);letter-spacing:-.04em;margin:9px 0}
+.novel-count{font:11px var(--mono);display:inline-block;border:1px solid #222;border-radius:99px;padding:7px 11px;margin-top:5px}
+.novel-author{font:10px var(--mono);color:#666;margin-top:12px}
+@media(max-width:800px){.novel-grid{grid-template-columns:1fr}.novel-cover{min-height:300px}.novel-cover img{height:390px}}
+
+
+.nav-tools{display:flex;align-items:center;gap:8px}.tool-btn{border:1px solid #111;border-radius:99px;background:#fff;padding:8px 11px;font:10px var(--mono);cursor:pointer;transition:.2s}.tool-btn:hover{background:#111;color:#fff;transform:translateY(-2px)}
+.timeline{border-left:1.5px dashed #222;margin:35px 0 0 12px;padding-left:28px;display:grid;gap:24px}.time-item{position:relative}.time-item:before{content:'';position:absolute;width:13px;height:13px;background:var(--paper);border:2px solid #111;border-radius:50%;left:-36px;top:3px}.time-item b{font:12px var(--mono);letter-spacing:.08em}.time-item p{margin:7px 0 0;color:#666;line-height:1.6;font-size:14px}
+.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}.gallery-tile{min-height:220px;border:1.5px solid #111;border-radius:16px;background:#fff;box-shadow:5px 5px 0 #111;display:grid;place-items:center;position:relative;overflow:hidden;cursor:pointer;transition:.25s}.gallery-tile:hover{transform:translateY(-5px) rotate(-1deg);box-shadow:8px 9px 0 #111}.gallery-tile span{position:absolute;bottom:13px;left:15px;font:10px var(--mono);letter-spacing:.1em}.orb{width:120px;height:120px;border:1px solid #111;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff 0 8%,#aaa 9% 12%,#333 13% 48%,#050505 70%);box-shadow:inset -18px -15px 28px #000,8px 8px 0 #ddd;animation:floaty 5s ease-in-out infinite}.wirecube{width:105px;height:105px;border:2px solid #111;transform:rotate(35deg) skew(-8deg,-8deg);position:relative}.wirecube:before,.wirecube:after{content:'';position:absolute;inset:14px;border:1px dashed #111;transform:translate(18px,-18px)}.wirecube:after{inset:-16px 16px 16px -16px;border-style:solid;opacity:.5}.rings{width:145px;height:100px;border:2px solid #111;border-radius:50%;transform:rotate(-25deg);position:relative}.rings:before,.rings:after{content:'';position:absolute;inset:12px -10px;border:1px solid #111;border-radius:50%;transform:rotate(55deg)}.rings:after{transform:rotate(-55deg)}
+.journal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px}.journal-card{border:1.5px solid #111;border-radius:16px;padding:20px;background:white;box-shadow:4px 4px 0 #111;min-height:175px}.journal-card small{font:10px var(--mono);color:#666}.journal-card h3{font:700 21px var(--display);margin:14px 0 8px}.journal-card p{font-size:13px;line-height:1.6;color:#666;margin:0}
+.command-overlay{position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:80;display:none;align-items:flex-start;justify-content:center;padding:15vh 18px}.command-overlay.open{display:flex}.command-box{width:min(560px,100%);background:#faf9f6;border:1.5px solid #111;border-radius:18px;box-shadow:9px 9px 0 #111;padding:15px}.command-box input{width:100%;border:1px solid #aaa;border-radius:10px;padding:15px;background:#fff;font:14px var(--sans);outline:none}.command-list{display:grid;gap:5px;margin-top:12px}.command-list button{border:0;text-align:left;background:transparent;padding:12px;border-radius:9px;cursor:pointer;font:12px var(--mono)}.command-list button:hover{background:#111;color:#fff}.command-hint{font:10px var(--mono);color:#777;padding:10px 4px 0}
+.lightbox{position:fixed;inset:0;background:rgba(0,0,0,.88);z-index:90;display:none;align-items:center;justify-content:center;padding:24px;color:white}.lightbox.open{display:flex}.lightbox-inner{max-width:650px;text-align:center}.lightbox button{border:1px solid white;background:transparent;color:white;border-radius:99px;padding:9px 15px;cursor:pointer}.lightbox p{font:12px var(--mono);line-height:1.7}
+.easter-toast{position:fixed;bottom:24px;left:50%;transform:translate(-50%,20px);opacity:0;pointer-events:none;background:#111;color:#fff;padding:13px 18px;border-radius:99px;font:11px var(--mono);z-index:100;transition:.35s;max-width:90%;text-align:center}.easter-toast.show{opacity:1;transform:translate(-50%,0)}
+@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+@media(max-width:800px){.nav-tools{margin-left:auto;margin-right:8px}.nav{display:none;position:absolute;top:58px;left:0;right:0;background:var(--paper);border:1.5px solid #111;border-radius:16px;padding:18px;flex-direction:column;box-shadow:4px 4px 0 #111}.nav.open{display:flex}.menu{display:block}.tool-btn span{display:none}.gallery-grid,.journal-grid{grid-template-columns:1fr}.gallery-tile{min-height:190px}}
+
+.music-modal{position:fixed;inset:0;z-index:1000;background:rgba(0,0,0,.55);display:none;place-items:center;padding:20px}.music-modal.open{display:grid}.music-panel{position:relative;width:min(520px,100%);background:var(--paper,#faf9f6);border:2px solid var(--ink,#111);border-radius:18px;padding:28px;box-shadow:8px 8px 0 var(--ink,#111)}.music-panel h3{font-size:clamp(26px,5vw,38px);margin:8px 0}.music-panel p{font-size:14px;color:#555;margin:0 0 18px}.music-panel iframe{border:1px solid #aaa;border-radius:10px}.music-close{position:absolute;right:14px;top:10px;border:1px solid #111;background:transparent;border-radius:50%;width:34px;height:34px;font-size:22px;cursor:pointer}.music-source{display:inline-block;margin-top:14px;font:11px var(--mono);color:inherit;text-decoration:underline}
+</style>
+</head>
+<body>
+<div class="grain"></div>
+<header class="topbar"><a class="brand" href="#home">EZURA<span style="font-weight:400">✦</span></a><nav class="nav" id="nav"><a href="#about">About</a><a href="#skills">Skills</a><a href="#works">Works</a><a href="#gallery">Gallery</a><a href="#journal">Journal</a><a href="#timeline">Journey</a><a href="#novels">Novels</a><a href="#process">Process</a><a href="#contact">Contact</a></nav><div class="nav-tools"><button class="tool-btn" id="musicToggle" aria-label="Open Luv(sic) Part 2 player">♫ <span>Luv(sic) pt2</span></button><button class="tool-btn" id="commandOpen" aria-label="Open command menu">⌘ K</button></div><button class="menu" id="menu" aria-label="Open menu">☰</button></header>
+<div class="music-modal" id="musicModal" role="dialog" aria-modal="true" aria-label="EZURA soundtrack"><div class="music-panel"><button class="music-close" id="musicClose" aria-label="Close player">×</button><div class="section-kicker">EZURA'S SOUNDTRACK</div><h3>Luv(sic) Part 2</h3><p> Nujabes feat. Shing02 · Press play when you're ready.</p><iframe title="Nujabes - Luv(sic) Part 2 official audio" width="100%" height="166" src="https://www.youtube-nocookie.com/embed/fQejNoTkv-0?rel=0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><a class="music-source" href="https://www.youtube.com/watch?v=fQejNoTkv-0" target="_blank" rel="noopener">OPEN OFFICIAL AUDIO ↗</a></div></div>
+<main>
+<section class="hero" id="home">
+ <div class="orbit a"></div><div class="orbit b"></div><div class="cursor-star">✦</div>
+ <div class="eyebrow">A little corner of my creative universe · 2026</div>
+ <div class="hero-mark"><div class="browser"><div class="hero-title">Portfo<span>lio.</span></div><p class="hero-sub">WRITER / WEB DEV / GAME DEV / 3D ARTIST</p></div><span class="spark one">✳</span><span class="spark two">✦</span></div>
+ <p style="font:13px var(--mono);margin:12px 0 22px">Hello, world! I'm <b>EZURA</b> — I create across stories and digital spaces.</p>
+ <a class="welcome" href="#about">Welcome! <span>↘</span></a>
+ <div class="doodle" style="left:8%;bottom:12%"><svg viewBox="0 0 100 100" fill="none" stroke="black" stroke-width="2"><path d="M15 70 Q10 20 48 18 Q86 15 82 57 Q79 89 48 83 Q24 80 30 52 Q36 32 58 40"/><path d="M44 50l5 5m0-5l-5 5M62 50l5 5m0-5l-5 5"/></svg></div>
+</section>
+<section id="about" class="reveal"><div class="about-wrap"><div><div class="avatar-card"><div class="avatar-top">● ● ● <span style="float:right">ME.exe</span></div><div class="avatar-art"><div class="ezura-avatar-mark">EZURA<span>✦</span></div></div></div></div><div><div class="section-kicker">01 / The person behind the pixels</div><h2 class="section-title">Hi, I'm<br>EZURA!</h2><div class="about-copy">I'm a <strong>novel writer</strong>, web developer, game developer, and 3D artist. I enjoy turning ideas into stories, fictional worlds, illustrations, and digital experiences. I work in both Indonesian and English.</div><div class="tag-row"><span class="tag">✍ Novel Writer</span><span class="tag">⌘ Frontend Development</span><span class="tag">▧ Worldbuilding</span><span class="tag">✎ Illustration</span><span class="tag">◉ Indonesian · English</span></div></div></div></section>
+<section id="skills" class="skills reveal"><div class="section-kicker">02 / Things I can do</div><h2 class="section-title">My Skills.</h2><div class="skill-grid">
+ <article class="skill-card"><div class="skill-num">01 — CODE</div><div class="skill-icon">⌘</div><h3>Frontend Development</h3><p>Building the visual and interactive side of websites.</p></article>
+ <article class="skill-card"><div class="skill-num">02 — WORLDS</div><div class="skill-icon">◇</div><h3>Worldbuilding</h3><p>Creating fictional settings, histories, and story foundations.</p></article>
+ <article class="skill-card"><div class="skill-num">03 — ART</div><div class="skill-icon">✎</div><h3>Illustration</h3><p>Visual ideas and artwork.</p></article>
+ <article class="skill-card"><div class="skill-num">04 — STORIES</div><div class="skill-icon">✍</div><h3>Novel Writing</h3><p>Long-form storytelling and original fiction.</p></article>
+ </div><div class="tag-row" style="margin-top:24px"><span class="tag">TOOLS / VS CODE</span><span class="tag">OBSIDIAN</span><span class="tag">GITHUB COPILOT</span></div></section>
+
+<section id="novels" class="reveal">
+ <div class="work-intro"><div><div class="section-kicker">03 / Stories I've completed</div><h2 class="section-title">My<br>Novels.</h2></div>
+ <p>Two completed stories, each with its own world. Featuring the original book covers.</p></div>
+ <div class="novel-grid">
+  <article class="novel-card">
+   <div class="novel-cover"><img src="assets/aethergard-cover.png" alt="Cover of Aethergard: Unwoven Thread"></div>
+   <div class="novel-info"><small>01 / COMPLETED NOVEL</small><h3>Aethergard: Unwoven Thread</h3><span class="novel-count">457 CHAPTERS</span><div class="novel-author">BY EZURA</div></div>
+  </article>
+  <article class="novel-card">
+   <div class="novel-cover"><img src="assets/fragment-cover.png" alt="Cover of Fragments That Refused to End"></div>
+   <div class="novel-info"><small>02 / COMPLETED NOVEL</small><h3>Fragments That Refused to End</h3><span class="novel-count">250 CHAPTERS</span><div class="novel-author">BY EZURA</div></div>
+  </article>
+ </div>
+</section>
+
+<section id="works" class="reveal"><div class="work-intro"><div><div class="section-kicker">03 / A few things I've made</div><h2 class="section-title">Selected<br>Works.</h2></div><p>A collection of experiments, stories, digital spaces, and imaginary worlds. More projects coming soon.</p></div>
+ <div class="work-grid">
+ <article class="work-card"><div class="work-visual pattern"><div class="book"><small>AN ORIGINAL STORY</small><b>THE<br>OTHER<br>WORLD</b><small>A NOVEL BY EZURA</small></div></div><div class="work-meta"><small>01 / WRITING</small><h3>Novel & Stories</h3><p>Stories, characters, lore, and worlds built from imagination.</p><a class="work-link" href="#contact">ASK ABOUT MY WRITING ↗</a></div></article>
+ <article class="work-card"><div class="work-visual"><div class="visual-word outline">MAKE<br>IT WEB.</div></div><div class="work-meta"><small>02 / WEB DEVELOPMENT</small><h3>Web Experiences</h3><p>Websites and interfaces designed to be useful, expressive, and fun to explore.</p><a class="work-link" href="#contact">VIEW WEB PROJECTS ↗</a></div></article>
+ <article class="work-card"><div class="work-visual dark"><div class="game-screen"><div class="visual-word">GAME<br>ON<span style="font-size:.5em"> ✦</span></div></div></div><div class="work-meta"><small>03 / GAME DEVELOPMENT</small><h3>Games & Experiments</h3><p>Playable ideas, game concepts, mechanics, and interactive worlds.</p><a class="work-link" href="#contact">EXPLORE GAMES ↗</a></div></article>
+ <article class="work-card"><div class="work-visual pattern"><div class="cube"></div><span style="position:absolute;bottom:18px;right:18px;font:10px var(--mono)">BLENDER / 3D</span></div><div class="work-meta"><small>04 / 3D ART</small><h3>Blender Creations</h3><p>Models, objects, scenes, and visual experiments made in 3D.</p><a class="work-link" href="#contact">VIEW 3D ART ↗</a></div></article>
+ </div></section>
+<section id="process" class="reveal"><div class="process"><div><div class="section-kicker">04 / How I create</div><h2 class="section-title">From idea<br>to reality.</h2><p style="max-width:430px;line-height:1.8;color:#555">Every project starts with a little curiosity. I explore, sketch, build, test, and refine until the idea becomes something real.</p></div><div class="process-box"><div class="eyebrow" style="color:#bbb">MY CREATIVE LOOP</div><ol><li>Imagine — collect ideas & references</li><li>Plan — shape the concept</li><li>Create — write, design, or code</li><li>Experiment — test different directions</li><li>Polish — refine the little details</li><li>Share — put it out into the world</li></ol><div style="text-align:right;font-size:30px">↗</div></div></div></section>
+
+<section id="gallery" class="reveal">
+ <div class="section-kicker">07 / Form, space & experiments</div><h2 class="section-title">3D Playground.</h2>
+ <p style="max-width:560px;line-height:1.8;color:#555">An interactive placeholder gallery for future Blender renders and experiments. Replace these studies with your original work whenever you're ready.</p>
+ <div class="gallery-grid">
+  <button class="gallery-tile" data-detail="Abstract Orb — placeholder study. Add your own Blender render here."><div class="orb"></div><span>01 / ABSTRACT FORM</span></button>
+  <button class="gallery-tile" data-detail="Wireframe Study — placeholder study. Add a model screenshot or wireframe render here."><div class="wirecube"></div><span>02 / WIREFRAME STUDY</span></button>
+  <button class="gallery-tile" data-detail="Celestial Rings — placeholder study. Replace this graphic with your own 3D scene."><div class="rings"></div><span>03 / CELESTIAL OBJECT</span></button>
+ </div>
+</section>
+<section id="journal" class="reveal">
+ <div class="section-kicker">08 / Notes from the desk</div><h2 class="section-title">Creative Journal.</h2>
+ <p style="max-width:560px;line-height:1.8;color:#555">A space for process notes, experiments, and behind-the-scenes entries. These are starter prompts, not claims about completed projects.</p>
+ <div class="journal-grid">
+  <article class="journal-card"><small>WRITING / FIELD NOTES</small><h3>Building a world through records</h3><p>Notes about geography, archives, memory, and the small inconsistencies that make fictional histories feel alive.</p></article>
+  <article class="journal-card"><small>CODE / WORKFLOW</small><h3>From sketch to interface</h3><p>A place to document layout experiments, interaction ideas, responsive decisions, and lessons from building for the web.</p></article>
+  <article class="journal-card"><small>3D / EXPERIMENTS</small><h3>Learning to shape a scene</h3><p>Collect lighting tests, modeling studies, material experiments, and render breakdowns.</p></article>
+ </div>
+</section>
+<section id="timeline" class="reveal">
+ <div class="section-kicker">09 / The creative journey</div><h2 class="section-title">In progress.<br>Always.</h2>
+ <p style="max-width:560px;line-height:1.8;color:#555">A living timeline of the different disciplines behind EZURA. More milestones can be added as the journey grows.</p>
+ <div class="timeline">
+  <div class="time-item"><b>STORYTELLING</b><p>Completed two long-form novels: <em>Aethergard: Unwoven Thread</em> and <em>Fragments That Refused to End</em>.</p></div>
+  <div class="time-item"><b>WEB DEVELOPMENT</b><p>Building digital experiences and exploring interactive web design.</p></div>
+  <div class="time-item"><b>GAME DEVELOPMENT</b><p>Exploring playable ideas, mechanics, and interactive worlds.</p></div>
+  <div class="time-item"><b>3D / BLENDER</b><p>Creating and experimenting with three-dimensional forms, scenes, and renders.</p></div>
+ </div>
+</section>
+
+<section id="contact" class="contact reveal"><div class="section-kicker">05 / Have an idea?</div><h2 class="section-title">Let's make<br>something.</h2><p class="contact-note">Have a project, a story idea, or just want to say hello? My inbox is open.</p><a class="contact-btn" href="mailto:ezura.aurelith405@gmail.com">SAY HELLO ↗</a><p style="font:10px var(--mono);margin-top:25px;color:#777">EMAIL · ezura.aurelith405@gmail.com · GITHUB PROFILE IN PROGRESS</p></section>
+</main>
+
+<div class="command-overlay" id="commandOverlay" role="dialog" aria-modal="true" aria-label="Quick navigation">
+ <div class="command-box"><input id="commandSearch" type="text" placeholder="Type to navigate… (try novels, gallery, journal)" autocomplete="off"><div class="command-list" id="commandList">
+  <button data-target="#home">⌂ Home</button><button data-target="#about">◎ About me</button><button data-target="#skills">✦ Skills</button><button data-target="#novels">▤ Novels</button><button data-target="#works">⌘ Selected works</button><button data-target="#gallery">◇ 3D gallery</button><button data-target="#journal">✎ Creative journal</button><button data-target="#timeline">↗ Timeline</button><button data-target="#contact">✉ Contact</button>
+ </div><div class="command-hint">ESC TO CLOSE · ENTER TO OPEN SELECTED</div></div>
+</div>
+<div class="lightbox" id="lightbox"><div class="lightbox-inner"><button id="lightboxClose">CLOSE ×</button><p id="lightboxText"></p></div></div>
+<div class="easter-toast" id="easterToast">A story is never just one thing. — EZURA</div>
+
+<footer><span>© 2026 EZURA. MADE WITH CURIOSITY.</span><span>BACK TO TOP ↑ <a href="#home">↗</a></span></footer>
+
+<script>
+const menu=document.getElementById('menu'),nav=document.getElementById('nav');
+menu?.addEventListener('click',()=>nav.classList.toggle('open'));
+nav?.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
+const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('show');observer.unobserve(entry.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+
+const overlay=document.getElementById('commandOverlay'),search=document.getElementById('commandSearch'),list=document.getElementById('commandList');
+function openCommand(){overlay.classList.add('open');search.value='';filterCommands();setTimeout(()=>search.focus(),40)}
+function closeCommand(){overlay.classList.remove('open')}
+document.getElementById('commandOpen')?.addEventListener('click',openCommand);
+document.addEventListener('keydown',e=>{if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='k'){e.preventDefault();openCommand()}if(e.key==='Escape'){closeCommand();document.getElementById('lightbox').classList.remove('open')}});
+function filterCommands(){const q=search.value.toLowerCase();list.querySelectorAll('button').forEach(b=>b.style.display=b.textContent.toLowerCase().includes(q)?'block':'none')}
+search.addEventListener('input',filterCommands);
+list.querySelectorAll('button').forEach(b=>b.addEventListener('click',()=>{document.querySelector(b.dataset.target)?.scrollIntoView({behavior:'smooth'});closeCommand()}));
+overlay.addEventListener('click',e=>{if(e.target===overlay)closeCommand()});
+
+const lightbox=document.getElementById('lightbox'),lightboxText=document.getElementById('lightboxText');
+document.querySelectorAll('.gallery-tile').forEach(tile=>tile.addEventListener('click',()=>{lightboxText.textContent=tile.dataset.detail;lightbox.classList.add('open')}));
+document.getElementById('lightboxClose').addEventListener('click',()=>lightbox.classList.remove('open'));
+lightbox.addEventListener('click',e=>{if(e.target===lightbox)lightbox.classList.remove('open')});
+
+const musicModal=document.getElementById('musicModal');
+document.getElementById('musicToggle').addEventListener('click',()=>musicModal.classList.add('open'));
+document.getElementById('musicClose').addEventListener('click',()=>musicModal.classList.remove('open'));
+musicModal.addEventListener('click',e=>{if(e.target===musicModal)musicModal.classList.remove('open')});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')musicModal.classList.remove('open')});
+
+let typed='';
+document.addEventListener('keydown',e=>{if(['INPUT','TEXTAREA'].includes(document.activeElement.tagName))return;if(e.key.length===1){typed=(typed+e.key.toUpperCase()).slice(-5);if(typed==='EZURA'){const t=document.getElementById('easterToast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),3200);typed=''}}});
+document.querySelector('.brand')?.addEventListener('click',e=>{if(e.detail===3){const t=document.getElementById('easterToast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),3200)}});
+</script>
+
+</body></html>
